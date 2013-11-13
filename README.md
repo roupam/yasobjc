@@ -7,11 +7,11 @@ Basic Usage: `yasobjc.rb -o DIR file1 file2 ...`
 
 Example:
 
-    find /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks -name "*.h" | xargs yasobjc.rb -o ~/.emacs.d/yasnippet/text-mode/cc-mode/objc-mode
+    find /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks -name "*.h" | xargs yasobjc.rb -o ~/.emacs.d/yasnippet/objc-mode
 
 or in XCode 5:
 
-    find /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks -name "*.h" | xargs ./yasobjc.rb -o ~/.emacs.d/yasnippet/text-mode/cc-mode/objc-mode
+    find /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks -name "*.h" | xargs ./yasobjc.rb -o ~/.emacs.d/yasnippet/objc-mode
 
 which will generate all snippets into standard yasnippet directory.
 
