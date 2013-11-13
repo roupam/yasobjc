@@ -92,12 +92,16 @@ ARGV.each do|f|
   puts "Processing #{basename}.h" if options[:verbose]
   
   open(File.expand_path(f), 'r').each do |line|
-    function_match = $function.match(line)
+    begin
+      # strage UTF error in the match line, so just try catch it.
+      function_match = $function.match(line)
 
-    if function_match
-      transform_function(function_match[2], basename, options[:outputdir])
-      snippets_count += 1
-    end    
+      if function_match
+        transform_function(function_match[2], basename, options[:outputdir])
+        snippets_count += 1
+      end    
+    rescue
+    end
   end
 end
 
