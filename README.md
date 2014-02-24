@@ -11,8 +11,8 @@ Example:
 
 or in XCode 5:
 
-    find /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks -name "*.h" | xargs ./yasobjc.rb -o ~/.emacs.d/yasnippet/objc-mode
-
+    find $(xcrun --sdk iphoneos7.0 --show-sdk-path)/System/Library/Frameworks -name '*.h' | xargs ./yasobjc.rb -o ~/.emacs.d/yasnippet/objc-mode
+    
 which will generate all snippets into standard yasnippet directory.
 
 One snippet is generated per objective-c function, and the snippets
